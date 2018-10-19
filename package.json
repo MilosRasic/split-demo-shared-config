@@ -1,0 +1,24 @@
+{
+  "name": "@split-demo/shared-config",
+  "version": "1.0.0",
+  "description": "Split Demo shared config",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/MilosRasic/split-demo-shared-config"
+  },
+  "scripts": {
+    "precommit": "npm test && lint-staged && npm run bump && git add --all",
+    "test": "mocha --timeout 35000 --require @babel/register --require ./test/test_helper.js \"test/**/*@(*.test.js|*.test.jsx)\""
+  },
+  "lint-staged": {
+    "*.{js,jsx}": [
+      "prettier --config .prettierrc --write"
+    ]
+  },
+  "author": "Miloš Rašić <milos.rasic@gmail.com> (https://github.com/MilosRasic)",
+  "license": "MIT",
+  "devDependencies": {
+    "@split-demo/shared-build-deps": "latest"
+  }
+}
